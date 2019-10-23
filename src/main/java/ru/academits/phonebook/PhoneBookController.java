@@ -31,12 +31,14 @@ public class PhoneBookController {
     @RequestMapping(value = "addContact", method = RequestMethod.POST)
     @ResponseBody
     public ContactValidation addContact(@RequestBody Contact contact) {
+        logger.info("called method addContact id = " + contact.getId());
         return contactService.addContact(contact);
     }
 
     @RequestMapping(value = "deleteContact", method = RequestMethod.POST)
     @ResponseBody
     public void deleteContact(@RequestBody Contact contact) {
+        logger.info("called method deleteContact id = " + contact.getId());
         contactService.deleteContact(contact);
     }
 }

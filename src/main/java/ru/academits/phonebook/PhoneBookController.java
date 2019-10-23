@@ -14,8 +14,8 @@ import java.util.List;
 @RequestMapping("/phoneBook/rpc/api/v1")
 public class PhoneBookController {
     private static final Logger logger = LoggerFactory.getLogger(PhoneBookController.class);
-
     private final ContactService contactService;
+
 
     public PhoneBookController(ContactService contactService) {
         this.contactService = contactService;
